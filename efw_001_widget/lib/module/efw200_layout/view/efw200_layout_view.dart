@@ -17,7 +17,7 @@ class Efw200LayoutView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [
+            children: [
               /*--------
               1. Buatlah sebuah Row dengan 3 buah Container, dimana setiap container memiliki lebar dan tinggi yang sama, dan memiliki warna yang berbeda-beda dengan property sebagai berikut:
               - Container 1:
@@ -33,6 +33,25 @@ class Efw200LayoutView extends StatefulWidget {
                 - height: 100
                 - color: Colors.blue
               --------*/
+              Row(
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.red,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.blue,
+                  ),
+                ],
+              ),
 
               /*--------
               2. Buatlah sebuah Row dengan 2 buah ElevatedButton, dimana setiap tombol memiliki teks yang berbeda-beda dan ukuran yang berbeda-beda dengan property sebagai berikut:
@@ -43,6 +62,25 @@ class Efw200LayoutView extends StatefulWidget {
                 - child: Text("Button 2", style: TextStyle(fontSize: 20.0))
                 - style: ElevatedButton.styleFrom(backgroundColor: Colors.green)
               --------*/
+
+              Row(
+                children: [
+                  ElevatedButton(
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                    onPressed: () {},
+                    child: const Text("Button 1",
+                        style: TextStyle(fontSize: 16.0)),
+                  ),
+                  ElevatedButton(
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                    onPressed: () {},
+                    child: const Text("Button 2",
+                        style: TextStyle(fontSize: 20.0)),
+                  ),
+                ],
+              ),
 
               /*--------
               3. Buatlah sebuah Row dengan 4 buah Text widget, dimana setiap widget memiliki ukuran yang berbeda-beda dan warna yang sama dengan property sebagai berikut:
@@ -60,6 +98,27 @@ class Efw200LayoutView extends StatefulWidget {
                 - style: TextStyle(fontSize: 28.0, color: Colors.red)
               --------*/
 
+              Row(
+                children: const [
+                  Text(
+                    "Hello",
+                    style: TextStyle(fontSize: 16.0, color: Colors.red),
+                  ),
+                  Text(
+                    "Hello",
+                    style: TextStyle(fontSize: 20.0, color: Colors.red),
+                  ),
+                  Text(
+                    "Hello",
+                    style: TextStyle(fontSize: 24.0, color: Colors.red),
+                  ),
+                  Text(
+                    "Hello",
+                    style: TextStyle(fontSize: 28.0, color: Colors.red),
+                  ),
+                ],
+              ),
+
               /*--------
               4. Buatlah sebuah Row dengan 2 buah Icon, dimana setiap icon memiliki ukuran yang berbeda-beda dan warna yang berbeda-beda dengan property sebagai berikut:
               - Icon 1:
@@ -71,6 +130,21 @@ class Efw200LayoutView extends StatefulWidget {
                 - color: Colors.green
                 - size: 24.0
               --------*/
+
+              Row(
+                children: const [
+                  Icon(
+                    Icons.favorite,
+                    color: Colors.red,
+                    size: 32.0,
+                  ),
+                  Icon(
+                    Icons.star,
+                    color: Colors.green,
+                    size: 24.0,
+                  ),
+                ],
+              ),
 
               /*--------
               5. Buatlah sebuah Row dengan 3 buah Image, dimana setiap gambar memiliki lebar yang sama dan berasal dari sumber yang berbeda-beda dengan property sebagai berikut:
@@ -84,6 +158,23 @@ class Efw200LayoutView extends StatefulWidget {
                 - image: NetworkImage("https://www.example.com/image3.jpg")
                 - width: 100.0
               --------*/
+
+              Row(
+                children: const [
+                  Image(
+                    image: NetworkImage("https://www.example.com/image1.jpg"),
+                    width: 100.0,
+                  ),
+                  Image(
+                    image: NetworkImage("https://www.example.com/image2.jpg"),
+                    width: 100.0,
+                  ),
+                  Image(
+                    image: NetworkImage("https://www.example.com/image3.jpg"),
+                    width: 100.0,
+                  ),
+                ],
+              ),
 
               /*--------
               6. Buatlah sebuah Container dengan property sebagai berikut:
@@ -103,6 +194,26 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxis menjadi MainAxisAlignment.center
               --------*/
 
+              Container(
+                width: 200,
+                height: 100,
+                color: Colors.yellow,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      "Text 1",
+                      style: TextStyle(color: Colors.red),
+                    ),
+                    Text(
+                      "Text 2",
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               7. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 300
@@ -120,6 +231,44 @@ class Efw200LayoutView extends StatefulWidget {
                 - style: ElevatedButton.styleFrom(backgroundColor: Colors.white)
               - Atur mainAxis menjadi MainAxisAlignment.spaceEvenly
               --------*/
+
+              Container(
+                width: 300,
+                height: 50,
+                color: Colors.grey,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 1",
+                        style: TextStyle(fontSize: 20.0, color: Colors.red),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 2",
+                        style: TextStyle(fontSize: 20.0, color: Colors.green),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 3",
+                        style: TextStyle(fontSize: 20.0, color: Colors.blue),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               8. Buatlah sebuah Container dengan property sebagai berikut:
@@ -139,6 +288,22 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur crossAxis menjadi CrossAxisAlignment.end
               --------*/
 
+              Container(
+                width: 250,
+                height: 50,
+                color: Colors.orange,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: const [
+                    Icon(Icons.favorite),
+                    Icon(Icons.star),
+                    Icon(Icons.thumb_up),
+                    Icon(Icons.thumb_down),
+                  ],
+                ),
+              ),
+
               /*--------
               9. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 300
@@ -155,6 +320,27 @@ class Efw200LayoutView extends StatefulWidget {
                 - color: Colors.red
               - Atur mainAxis menjadi MainAxisAlignment.spaceBetween
               --------*/
+
+              Container(
+                width: 300,
+                height: 75,
+                color: Colors.purple,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 150,
+                      height: 50,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 50,
+                      color: Colors.red,
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               10. Buatlah sebuah Container dengan property sebagai berikut:
@@ -178,6 +364,30 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxis menjadi MainAxisAlignment.spaceAround
               --------*/
 
+              Container(
+                width: 300,
+                height: 75,
+                color: Colors.green,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: const [
+                    Text(
+                      "Text 1",
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                    Text(
+                      "Text 2",
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                    Text(
+                      "Text 3",
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               11. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 250
@@ -193,6 +403,21 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxis menjadi MainAxisAlignment.spaceEvenly
               - Atur crossAxis menjadi CrossAxisAlignment.start
               --------*/
+
+              Container(
+                width: 250,
+                height: 50,
+                color: Colors.red,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Icon(Icons.shopping_bag),
+                    Icon(Icons.shopping_cart),
+                    Icon(Icons.payment),
+                  ],
+                ),
+              ),
 
               /*--------
               12. Buatlah sebuah Container dengan property sebagai berikut:
@@ -211,6 +436,36 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur crossAxis menjadi CrossAxisAlignment.end
               - Atur mainAxis menjadi MainAxisAlignment.spaceEvenly
               --------*/
+
+              Container(
+                width: 200,
+                height: 100,
+                color: Colors.blue,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 1",
+                        style: TextStyle(fontSize: 20.0, color: Colors.red),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 2",
+                        style: TextStyle(fontSize: 20.0, color: Colors.green),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               13. Buatlah sebuah Container dengan property sebagai berikut:
@@ -238,6 +493,38 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur crossAxis menjadi CrossAxisAlignment.center
               --------*/
 
+              Container(
+                width: 300,
+                height: 75,
+                color: Colors.orange,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 50,
+                      height: 50,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 50,
+                      color: Colors.green,
+                    ),
+                    Container(
+                      width: 150,
+                      height: 50,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      width: 75,
+                      height: 50,
+                      color: Colors.purple,
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               14. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 200
@@ -255,6 +542,36 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur crossAxis menjadi CrossAxisAlignment.start
               - Atur mainAxis menjadi MainAxisAlignment.spaceBetween
               --------*/
+
+              Container(
+                width: 200,
+                height: 100,
+                color: Colors.teal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 1",
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 2",
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               15. Buatlah sebuah Container dengan property sebagai berikut:
@@ -274,6 +591,30 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur crossAxis menjadi CrossAxisAlignment.center
               - Atur mainAxis menjadi MainAxisAlignment.spaceEvenly
               --------*/
+
+              Container(
+                width: 300,
+                height: 50,
+                color: Colors.yellow,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const [
+                    Icon(
+                      Icons.camera,
+                      color: Colors.red,
+                    ),
+                    Icon(
+                      Icons.image,
+                      color: Colors.green,
+                    ),
+                    Icon(
+                      Icons.videocam,
+                      color: Colors.blue,
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               16. Buatlah sebuah Container dengan property sebagai berikut:
@@ -297,6 +638,30 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxisSize menjadi MainAxisSize.max
               --------*/
 
+              Container(
+                width: 150,
+                height: 200,
+                color: Colors.pink,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const [
+                    Text(
+                      "Text 1",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Text(
+                      "Text 2",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Text(
+                      "Text 3",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               17. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 250
@@ -314,6 +679,36 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur crossAxisAlignment menjadi CrossAxisAlignment.stretch
               - Atur mainAxisSize menjadi MainAxisSize.min
               --------*/
+
+              Container(
+                width: 250,
+                height: 150,
+                color: Colors.deepPurple,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 1",
+                        style: TextStyle(fontSize: 16.0, color: Colors.white),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 2",
+                        style: TextStyle(fontSize: 16.0, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               18. Buatlah sebuah Container dengan property sebagai berikut:
@@ -337,6 +732,33 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxisSize menjadi MainAxisSize.max
               --------*/
 
+              Container(
+                width: 200,
+                height: 250,
+                color: Colors.orange,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
+                      width: 50,
+                      height: 50,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 75,
+                      color: Colors.green,
+                    ),
+                    Container(
+                      width: 150,
+                      height: 100,
+                      color: Colors.red,
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               19. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 300
@@ -353,6 +775,33 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxisSize menjadi MainAxisSize.min
               --------*/
 
+              Container(
+                width: 300,
+                height: 75,
+                color: Colors.yellow,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Icon(
+                      Icons.home,
+                      color: Colors.black,
+                      size: 50,
+                    ),
+                    Icon(
+                      Icons.search,
+                      color: Colors.black,
+                      size: 50,
+                    ),
+                    Icon(
+                      Icons.person,
+                      color: Colors.black,
+                      size: 50,
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               20. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 200
@@ -368,6 +817,26 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur crossAxisAlignment menjadi CrossAxisAlignment.stretch
               - Atur mainAxisSize menjadi MainAxisSize.max
               --------*/
+
+              Container(
+                width: 200,
+                height: 150,
+                color: Colors.cyan,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Container(
+                      height: 50,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      height: 100,
+                      color: Colors.green,
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               21. Buatlah sebuah Container dengan property sebagai berikut:
@@ -387,6 +856,45 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur crossAxisAlignment menjadi CrossAxisAlignment.center
               - Atur mainAxisSize menjadi MainAxisSize.max
               --------*/
+
+              Container(
+                width: 250,
+                height: 200,
+                color: Colors.teal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 1",
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 2",
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 3",
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               22. Buatlah sebuah Container dengan property sebagai berikut:
@@ -410,6 +918,33 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxisSize menjadi MainAxisSize.max
               --------*/
 
+              Container(
+                width: 200,
+                height: 250,
+                color: Colors.deepPurple,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
+                      width: 50,
+                      height: 50,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 75,
+                      color: Colors.green,
+                    ),
+                    Container(
+                      width: 150,
+                      height: 100,
+                      color: Colors.red,
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               23. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 300
@@ -426,6 +961,36 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxisSize menjadi MainAxisSize.max
               --------*/
 
+              Container(
+                width: 300,
+                height: 100,
+                color: Colors.yellow,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 1",
+                        style: TextStyle(fontSize: 16.0, color: Colors.white),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue),
+                      onPressed: () {},
+                      child: const Text(
+                        "Button 2",
+                        style: TextStyle(fontSize: 16.0, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               24. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 200
@@ -439,6 +1004,24 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur crossAxisAlignment menjadi CrossAxisAlignment.stretch
               - Atur mainAxisSize menjadi MainAxisSize.max
               --------*/
+
+              Container(
+                width: 200,
+                height: 300,
+                color: Colors.red,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Container(
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      color: Colors.green,
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               25. Buatlah sebuah Container dengan property sebagai berikut:
@@ -467,6 +1050,46 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur crossAxisAlignment menjadi CrossAxisAlignment.center
               - Atur mainAxisSize menjadi MainAxisSize.max
               --------*/
+
+              Container(
+                width: 250,
+                height: 200,
+                color: Colors.teal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue),
+                      onPressed: () {
+                        const snackBar = SnackBar(
+                          content: Text('Button 1 was pressed'),
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      },
+                      child: const Text(
+                        "Button 1",
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green),
+                      onPressed: () {
+                        const snackBar = SnackBar(
+                          content: Text('Button 2 was pressed'),
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      },
+                      child: const Text(
+                        "Button 2",
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               26. Buatlah sebuah Container dengan property sebagai berikut:
@@ -500,6 +1123,60 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxisAlignment menjadi MainAxisAlignment.spaceEvenly
               --------*/
 
+              Container(
+                width: 250,
+                height: 200,
+                color: Colors.teal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          color: Colors.blue,
+                        ),
+                        Container(
+                          color: Colors.green,
+                        ),
+                        Container(
+                          color: Colors.orange,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          color: Colors.pink,
+                        ),
+                        Container(
+                          color: Colors.yellow,
+                        ),
+                        Container(
+                          color: Colors.purple,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          color: Colors.red,
+                        ),
+                        Container(
+                          color: Colors.cyan,
+                        ),
+                        Container(
+                          color: Colors.grey,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               27. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 300
@@ -522,6 +1199,43 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur verticalDirection menjadi VerticalDirection.down
               - Atur textDirection menjadi TextDirection.rtl
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.yellow,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  verticalDirection: VerticalDirection.down,
+                  textDirection: TextDirection.rtl,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          color: Colors.blue,
+                        ),
+                        Container(
+                          color: Colors.green,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          color: Colors.red,
+                        ),
+                        Container(
+                          color: Colors.yellow,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               28. Buatlah sebuah Container dengan property sebagai berikut:
@@ -546,6 +1260,43 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur textDirection menjadi TextDirection.ltr
               --------*/
 
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.blue,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  verticalDirection: VerticalDirection.up,
+                  textDirection: TextDirection.ltr,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          color: Colors.green,
+                        ),
+                        Container(
+                          color: Colors.orange,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          color: Colors.yellow,
+                        ),
+                        Container(
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               29. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 250
@@ -568,6 +1319,40 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxisSize menjadi MainAxisSize.max
               --------*/
 
+              Container(
+                width: 250,
+                height: 200,
+                color: Colors.teal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: const [
+                    Expanded(
+                      flex: 1,
+                      child: Text(
+                        "Text 1",
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Text(
+                        "Text 2",
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Text(
+                        "Text 3",
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               30. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 200
@@ -588,6 +1373,43 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxisAlignment menjadi MainAxisAlignment.spaceEvenly
               --------*/
 
+              Container(
+                width: 200,
+                height: 300,
+                color: Colors.yellow,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        color: Colors.red,
+                        width: 50,
+                        height: 50,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        color: Colors.green,
+                        width: 100,
+                        height: 100,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        color: Colors.blue,
+                        width: 150,
+                        height: 150,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               31. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 200
@@ -607,6 +1429,43 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxisSize menjadi MainAxisSize.max
               - Atur mainAxisAlignment menjadi MainAxisAlignment.spaceEvenly
               --------*/
+
+              Container(
+                width: 200,
+                height: 300,
+                color: Colors.green,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        color: Colors.red,
+                        width: 50,
+                        height: 50,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        color: Colors.blue,
+                        width: 100,
+                        height: 100,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        color: Colors.yellow,
+                        width: 150,
+                        height: 150,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               32. Buatlah sebuah Container dengan property sebagai berikut:
@@ -630,6 +1489,59 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur verticalDirection menjadi VerticalDirection.down
               - Atur textDirection menjadi TextDirection.rtl
               --------*/
+
+              Container(
+                width: 250,
+                height: 200,
+                color: Colors.yellow,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisSize: MainAxisSize.max,
+                  verticalDirection: VerticalDirection.down,
+                  textDirection: TextDirection.rtl,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisSize: MainAxisSize.max,
+                      verticalDirection: VerticalDirection.down,
+                      textDirection: TextDirection.rtl,
+                      children: [
+                        Container(
+                          color: Colors.blue,
+                          width: 50,
+                          height: 50,
+                        ),
+                        Container(
+                          color: Colors.green,
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisSize: MainAxisSize.max,
+                      verticalDirection: VerticalDirection.down,
+                      textDirection: TextDirection.rtl,
+                      children: [
+                        Container(
+                          color: Colors.red,
+                          width: 50,
+                          height: 50,
+                        ),
+                        Container(
+                          color: Colors.orange,
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               33. Buatlah sebuah Container dengan property sebagai berikut:
@@ -659,6 +1571,78 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur textDirection menjadi TextDirection.ltr
               --------*/
 
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.purple,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  verticalDirection: VerticalDirection.up,
+                  textDirection: TextDirection.ltr,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      verticalDirection: VerticalDirection.up,
+                      textDirection: TextDirection.ltr,
+                      children: [
+                        Container(
+                          color: Colors.green,
+                          width: 50,
+                          height: 50,
+                        ),
+                        Container(
+                          color: Colors.orange,
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      verticalDirection: VerticalDirection.up,
+                      textDirection: TextDirection.ltr,
+                      children: [
+                        Container(
+                          color: Colors.blue,
+                          width: 50,
+                          height: 50,
+                        ),
+                        Container(
+                          color: Colors.pink,
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      verticalDirection: VerticalDirection.up,
+                      textDirection: TextDirection.ltr,
+                      children: [
+                        Container(
+                          color: Colors.red,
+                          width: 50,
+                          height: 50,
+                        ),
+                        Container(
+                          color: Colors.yellow,
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               34. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 300
@@ -681,6 +1665,59 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur verticalDirection menjadi VerticalDirection.down
               - Atur textDirection menjadi TextDirection.rtl
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.teal,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisSize: MainAxisSize.max,
+                  verticalDirection: VerticalDirection.down,
+                  textDirection: TextDirection.rtl,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisSize: MainAxisSize.max,
+                      verticalDirection: VerticalDirection.down,
+                      textDirection: TextDirection.rtl,
+                      children: [
+                        Container(
+                          color: Colors.blue,
+                          width: 50,
+                          height: 50,
+                        ),
+                        Container(
+                          color: Colors.green,
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisSize: MainAxisSize.max,
+                      verticalDirection: VerticalDirection.down,
+                      textDirection: TextDirection.rtl,
+                      children: [
+                        Container(
+                          color: Colors.red,
+                          width: 50,
+                          height: 50,
+                        ),
+                        Container(
+                          color: Colors.orange,
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               35. Buatlah sebuah Container dengan property sebagai berikut:
@@ -710,6 +1747,41 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur spacing menjadi 10
               - Atur runSpacing menjadi 20
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.teal,
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.start,
+                  alignment: WrapAlignment.start,
+                  runAlignment: WrapAlignment.spaceBetween,
+                  spacing: 10,
+                  runSpacing: 20,
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      width: 75,
+                      height: 75,
+                    ),
+                    Container(
+                      color: Colors.blue,
+                      width: 100,
+                      height: 100,
+                    ),
+                    Container(
+                      color: Colors.yellow,
+                      width: 125,
+                      height: 125,
+                    ),
+                    Container(
+                      color: Colors.orange,
+                      width: 150,
+                      height: 150,
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               36. Buatlah sebuah Container dengan property sebagai berikut:
@@ -748,6 +1820,51 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur runSpacing menjadi 20
               --------*/
 
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.yellow,
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  alignment: WrapAlignment.spaceBetween,
+                  runAlignment: WrapAlignment.start,
+                  spacing: 10,
+                  runSpacing: 20,
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      width: 50,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.blue,
+                      width: 50,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.green,
+                      width: 50,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.orange,
+                      width: 50,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.purple,
+                      width: 50,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.teal,
+                      width: 50,
+                      height: 50,
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               37. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 300
@@ -773,6 +1890,37 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur runSpacing menjadi 10
               - Atur textDirection menjadi TextDirection.rtl
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.orange,
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.end,
+                  alignment: WrapAlignment.center,
+                  runAlignment: WrapAlignment.spaceBetween,
+                  spacing: 20,
+                  runSpacing: 10,
+                  textDirection: TextDirection.rtl,
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      width: 100,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.blue,
+                      width: 50,
+                      height: 100,
+                    ),
+                    Container(
+                      color: Colors.green,
+                      width: 75,
+                      height: 75,
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               38. Buatlah sebuah Container dengan property sebagai berikut:
@@ -802,6 +1950,41 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur spacing menjadi 20
               - Atur runSpacing menjadi 10
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.pink,
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.start,
+                  alignment: WrapAlignment.center,
+                  runAlignment: WrapAlignment.spaceBetween,
+                  spacing: 20,
+                  runSpacing: 10,
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      width: 100,
+                      height: 75,
+                    ),
+                    Container(
+                      color: Colors.blue,
+                      width: 75,
+                      height: 100,
+                    ),
+                    Container(
+                      color: Colors.green,
+                      width: 50,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.orange,
+                      width: 125,
+                      height: 125,
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               39. Buatlah sebuah Container dengan property sebagai berikut:
@@ -836,6 +2019,46 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur runSpacing menjadi 10
               --------*/
 
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.blue,
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.end,
+                  alignment: WrapAlignment.end,
+                  runAlignment: WrapAlignment.spaceBetween,
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      width: 50,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.green,
+                      width: 50,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.yellow,
+                      width: 50,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.purple,
+                      width: 50,
+                      height: 50,
+                    ),
+                    Container(
+                      color: Colors.orange,
+                      width: 50,
+                      height: 50,
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               40. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 300
@@ -860,6 +2083,53 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur spacing menjadi 10
               - Atur runSpacing menjadi 20
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.yellow,
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.start,
+                  alignment: WrapAlignment.center,
+                  runAlignment: WrapAlignment.spaceBetween,
+                  spacing: 10,
+                  runSpacing: 20,
+                  children: const [
+                    Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                      ),
+                    ),
+                    Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.blue,
+                      ),
+                    ),
+                    Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.green,
+                      ),
+                    ),
+                    Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.orange,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               41. Buatlah sebuah Container dengan property sebagai berikut:
@@ -894,6 +2164,93 @@ class Efw200LayoutView extends StatefulWidget {
               - Atur mainAxisAlignment menjadi MainAxisAlignment.spaceEvenly pada setiap Row
 
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.grey,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Expanded(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: const [
+                          Flexible(
+                            child: Text(
+                              "A1",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            child: Text(
+                              "B1",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            child: Text(
+                              "C1",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: const [
+                          Flexible(
+                            child: Text(
+                              "A2",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            child: Text(
+                              "B2",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            child: Text(
+                              "C2",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               42. Buatlah sebuah Container dengan property sebagai berikut:
@@ -937,6 +2294,108 @@ class Efw200LayoutView extends StatefulWidget {
 
               --------*/
 
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.grey,
+                child: Wrap(
+                  spacing: 8,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    Flexible(
+                      child: Column(
+                        children: const [
+                          Text(
+                            "A1",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.red,
+                            ),
+                          ),
+                          Text(
+                            "A2",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          Text(
+                            "A3",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Flexible(
+                      child: Column(
+                        children: const [
+                          Text(
+                            "B1",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.red,
+                            ),
+                          ),
+                          Text(
+                            "B2",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          Text(
+                            "B3",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Flexible(
+                      child: Column(
+                        children: const [
+                          Text(
+                            "C1",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.red,
+                            ),
+                          ),
+                          Text(
+                            "C2",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          Text(
+                            "C3",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               43. Buatlah sebuah Container dengan property sebagai berikut:
               - width: 300
@@ -978,8 +2437,135 @@ class Efw200LayoutView extends StatefulWidget {
               - Bungkus setiap Column dengan sebuah Flexible widget agar dapat menyesuaikan ukuran layar dengan baik
               - Atur spacing menjadi 8 pada Wrap
               - Atur alignment menjadi WrapAlignment.center pada Wrap
-
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.pink,
+                child: Wrap(
+                  spacing: 8,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    Flexible(
+                      child: Column(
+                        children: [
+                          Flexible(
+                            child: Row(
+                              children: const [
+                                Flexible(
+                                  child: Text(
+                                    "A1",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                                Flexible(
+                                  child: Text(
+                                    "A2",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Flexible(
+                            child: Row(
+                              children: const [
+                                Flexible(
+                                  child: Text(
+                                    "B1",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                                Flexible(
+                                  child: Text(
+                                    "B2",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Flexible(
+                      child: Column(
+                        children: [
+                          Flexible(
+                            child: Row(
+                              children: const [
+                                Flexible(
+                                  child: Text(
+                                    "C1",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                                Flexible(
+                                  child: Text(
+                                    "C2",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Flexible(
+                            child: Row(
+                              children: const [
+                                Flexible(
+                                  child: Text(
+                                    "D1",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                                Flexible(
+                                  child: Text(
+                                    "D2",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               44. Buatlah sebuah Wrap dengan property sebagai berikut:
@@ -1012,6 +2598,104 @@ class Efw200LayoutView extends StatefulWidget {
               - Bungkus setiap Column dengan sebuah Flexible widget agar dapat menyesuaikan ukuran layar dengan baik
 
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.pink,
+                child: Wrap(
+                  spacing: 16,
+                  runSpacing: 8,
+                  alignment: WrapAlignment.spaceBetween,
+                  direction: Axis.vertical,
+                  children: [
+                    Flexible(
+                      child: Column(
+                        children: [
+                          const Flexible(
+                            child: Text(
+                              "Column 1",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            child: Row(
+                              children: const [
+                                Flexible(
+                                  child: Text(
+                                    "A1",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                                Flexible(
+                                  child: Text(
+                                    "A2",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Flexible(
+                      child: Column(
+                        children: [
+                          const Flexible(
+                            child: Text(
+                              "Column 2",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            child: Row(
+                              children: const [
+                                Flexible(
+                                  child: Text(
+                                    "B1",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                                Flexible(
+                                  child: Text(
+                                    "B2",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               45. Buatlah sebuah Column dengan property sebagai berikut:
@@ -1063,6 +2747,124 @@ class Efw200LayoutView extends StatefulWidget {
 
               --------*/
 
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.pink,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      child: Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        alignment: WrapAlignment.center,
+                        direction: Axis.vertical,
+                        children: [
+                          Flexible(
+                            child: Row(
+                              children: const [
+                                Flexible(
+                                  child: Text(
+                                    "Row 1",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(8),
+                                  child: Icon(
+                                    Icons.star,
+                                    size: 32,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(8),
+                                  child: Icon(
+                                    Icons.favorite,
+                                    size: 32,
+                                    color: Colors.blue,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Flexible(
+                            child: Row(
+                              children: const [
+                                Flexible(
+                                  child: Text(
+                                    "Row 2",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(8),
+                                  child: Icon(
+                                    Icons.home,
+                                    size: 32,
+                                    color: Colors.green,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(8),
+                                  child: Icon(
+                                    Icons.school,
+                                    size: 32,
+                                    color: Colors.orange,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Flexible(
+                            child: Row(
+                              children: const [
+                                Flexible(
+                                  child: Text(
+                                    "Row 3",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(8),
+                                  child: Icon(
+                                    Icons.camera,
+                                    size: 32,
+                                    color: Colors.purple,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(8),
+                                  child: Icon(
+                                    Icons.music_note,
+                                    size: 32,
+                                    color: Colors.yellow,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               46. Buatlah sebuah Stack dengan property sebagai berikut:
               - alignment: Alignment.center
@@ -1110,6 +2912,70 @@ class Efw200LayoutView extends StatefulWidget {
               - Urutan tampilan Container harus Container 3, Container 2, Container 1 (dari bawah ke atas)
               --------*/
 
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.pink,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Container(
+                            width: 200,
+                            height: 200,
+                            color: Colors.red,
+                            margin: const EdgeInsets.all(8),
+                            child: const Center(
+                              child: Text(
+                                "Container 1",
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: 150,
+                            height: 150,
+                            color: Colors.green,
+                            margin: const EdgeInsets.all(8),
+                            child: const Center(
+                              child: Text(
+                                "Container 2",
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: 100,
+                            height: 100,
+                            color: Colors.blue,
+                            margin: const EdgeInsets.all(8),
+                            child: const Center(
+                              child: Text(
+                                "Container 3",
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               47. Buatlah sebuah Stack dengan property sebagai berikut:
               - alignment: Alignment.center
@@ -1151,6 +3017,68 @@ class Efw200LayoutView extends StatefulWidget {
                 - offset: Offset(0, 5)
               - Setiap widget yang ditambahkan ke dalam Stack harus memiliki posisi yang berbeda-beda menggunakan widget Positioned
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.pink,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Container(
+                            width: 200,
+                            height: 200,
+                            color: Colors.red,
+                            child: const Center(
+                              child: Text(
+                                "Container",
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 50,
+                            right: 50,
+                            child: Container(
+                              width: 200,
+                              height: 200,
+                              color: Colors.blue,
+                            ),
+                          ),
+                          const Positioned(
+                            bottom: 50,
+                            left: 50,
+                            child: Icon(
+                              Icons.star,
+                              size: 32,
+                              color: Colors.yellow,
+                            ),
+                          ),
+                          const Positioned(
+                            top: 50,
+                            left: 50,
+                            child: Image(
+                              image: NetworkImage(
+                                  'https://images.unsplash.com/photo-1646742225761-b49a8fc563f4'),
+                              width: 100,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               48. Buatlah sebuah Stack dengan property sebagai berikut:
@@ -1219,6 +3147,51 @@ class Efw200LayoutView extends StatefulWidget {
               - Ketika Text tersebut ditekan, tampilkan pesan "Anda menekan gambar latar belakang" menggunakan method print()
 
               --------*/
+
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.pink,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Image.asset(
+                            "assets/images/background.jpg",
+                            fit: BoxFit.cover,
+                            width: double.infinity,
+                            height: double.infinity,
+                            alignment: Alignment.center,
+                            color: Colors.black.withOpacity(0.5),
+                            colorBlendMode: BlendMode.darken,
+                          ),
+                          Positioned(
+                            bottom: 16,
+                            left: 16,
+                            child: GestureDetector(
+                              onTap: () {
+                                print("Anda menekan gambar latar belakang");
+                              },
+                              child: const Text(
+                                "Gambar Latar Belakang",
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
               /*--------
               50. Buatlah sebuah Stack dengan property sebagai berikut:
@@ -1313,6 +3286,77 @@ class Efw200LayoutView extends StatefulWidget {
               - Ketika Icon tersebut ditekan, tampilkan pesan "Anda menekan tombol kembali" menggunakan method print()
               --------*/
 
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.5),
+                      blurRadius: 5,
+                      offset: const Offset(3, 3),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Icons.access_alarm,
+                          size: 32,
+                          color: Colors.red,
+                        ),
+                        Text(
+                          "Alarm",
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Aplikasi Alarm",
+                      style: TextStyle(
+                        fontSize: 32,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            print("Anda menekan tombol kembali");
+                          },
+                          child: const Icon(
+                            Icons.arrow_back,
+                            size: 32,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const Text(
+                          "Kembali",
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               52. Buatlah sebuah Stack dengan property sebagai berikut:
               - alignment: Alignment.center
@@ -1374,6 +3418,77 @@ class Efw200LayoutView extends StatefulWidget {
               - Ketika Icon tersebut ditekan, tampilkan pesan "Anda menekan tombol lanjut" menggunakan method print()
               --------*/
 
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  color: Colors.lightBlue.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.5),
+                      blurRadius: 5,
+                      offset: const Offset(3, 3),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Icons.favorite,
+                          size: 32,
+                          color: Colors.pink,
+                        ),
+                        Text(
+                          "Love",
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.pink,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Aplikasi Pencarian Jodoh",
+                      style: TextStyle(
+                        fontSize: 32,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            print("Anda menekan tombol lanjut");
+                          },
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            size: 32,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const Text(
+                          "Lanjut",
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
               /*--------
               53. Buatlah sebuah Stack dengan property sebagai berikut:
               - alignment: Alignment.center
@@ -1414,6 +3529,57 @@ class Efw200LayoutView extends StatefulWidget {
               - Ketika Text tersebut ditekan, tampilkan pesan "Hello World! ditekan" menggunakan method print()
               --------*/
 
+              Stack(
+                alignment: Alignment.center,
+                fit: StackFit.expand,
+                children: [
+                  Container(
+                    width: 300,
+                    height: 300,
+                    decoration: BoxDecoration(
+                      color: Colors.lightBlue.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.5),
+                          blurRadius: 5,
+                          offset: const Offset(3, 3),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                print("Hello World! ditekan");
+                              },
+                              child: const Text(
+                                "Hello World!",
+                                style: TextStyle(
+                                  fontSize: 32,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const Image(
+                          image: AssetImage('images/flutter_logo.png'),
+                          width: 100,
+                          height: 100,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+
               /*--------
               54. Buatlah sebuah Row dengan property sebagai berikut:
               - mainAxisAlignment: MainAxisAlignment.center
@@ -1446,9 +3612,39 @@ class Efw200LayoutView extends StatefulWidget {
                       ),
                     ],
                   ),
-              - Ketika Image tersebut di-tap, tampilkan pesan "Flutter Logo ditekan" menggunakan method print()
+              - Ketika Image tersebut di-tap, tampilkan pesan "Flutter Logo ditekan" menggunakan method print()*/
 
-              55. Buatlah sebuah Column dengan property sebagai berikut:
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          print("Flutter Logo ditekan");
+                        },
+                        child: const Text(
+                          "Flutter",
+                          style: TextStyle(
+                            fontSize: 32,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Image(
+                    image: AssetImage('images/flutter_logo.png'),
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  ),
+                ],
+              ),
+
+              /*55. Buatlah sebuah Column dengan property sebagai berikut:
               - mainAxisAlignment: MainAxisAlignment.spaceAround
               - crossAxisAlignment: CrossAxisAlignment.center
               - children:
@@ -1490,6 +3686,59 @@ class Efw200LayoutView extends StatefulWidget {
               - Ketika Container biru di-tap, tampilkan pesan "Container biru ditekan" menggunakan method print()
               - Ketika Container kuning di-tap, tampilkan pesan "Container kuning ditekan" menggunakan method print()
               --------*/
+
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      print("Container merah ditekan");
+                    },
+                    child: Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.red,
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          print("Container hijau ditekan");
+                        },
+                        child: Container(
+                          width: 50,
+                          height: 50,
+                          color: Colors.green,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          print("Container biru ditekan");
+                        },
+                        child: Container(
+                          width: 50,
+                          height: 50,
+                          color: Colors.blue,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          print("Container kuning ditekan");
+                        },
+                        child: Container(
+                          width: 50,
+                          height: 50,
+                          color: Colors.yellow,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ),

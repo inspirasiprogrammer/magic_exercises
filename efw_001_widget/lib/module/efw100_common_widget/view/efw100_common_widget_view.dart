@@ -21,9 +21,7 @@ class Efw100CommonWidgetView extends StatefulWidget {
           child: Column(
             children: [
               Image.asset(
-                "assets/images/profile.png",
-                width: 100,
-                height: 100,
+                "assets/images/profile.png"
               ),
               /*--------
               1. Buatlah sebuah Container dengan property berikut:
