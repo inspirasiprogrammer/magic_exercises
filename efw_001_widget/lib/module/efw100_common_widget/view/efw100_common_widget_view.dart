@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:efw_001_widget/core.dart';
 import '../controller/efw100_common_widget_controller.dart';
-import 'package:flutter/services.dart';
 
 class Efw100CommonWidgetView extends StatefulWidget {
   const Efw100CommonWidgetView({Key? key}) : super(key: key);
@@ -20,9 +19,6 @@ class Efw100CommonWidgetView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              Image.asset(
-                "assets/images/profile.png"
-              ),
               /*--------
               1. Buatlah sebuah Container dengan property berikut:
                 - width: 200
@@ -468,115 +464,115 @@ class Efw100CommonWidgetView extends StatefulWidget {
                   - width: 150
                   - height: 150
               --------*/
-              // Image.asset('assets/images/image1.jpg', width: 150, height: 150),
+              Image.asset('assets/images/image1.jpg', width: 150, height: 150),
 
-              // /*--------
-              // 32. Buatlah sebuah Image dengan property berikut:
-              //     - image: AssetImage('assets/images/image2.jpg')
-              //     - width: 200
-              //     - height: 200
-              // --------*/
-              // const Image(
-              //   image: AssetImage('assets/images/image2.jpg'),
-              //   width: 200,
-              //   height: 200,
-              // ),
+              /*--------
+              32. Buatlah sebuah Image dengan property berikut:
+                  - image: AssetImage('assets/images/image2.jpg')
+                  - width: 200
+                  - height: 200
+              --------*/
+              const Image(
+                image: AssetImage('assets/images/image2.jpg'),
+                width: 200,
+                height: 200,
+              ),
 
-              // /*--------
-              // 33. Buatlah sebuah Image dengan property berikut:
-              //     - image: AssetImage('assets/images/image3.jpg')
-              //     - width: 100
-              //     - height: 100
-              // --------*/
-              // const Image(
-              //   image: AssetImage('assets/images/image3.jpg'),
-              //   width: 100,
-              //   height: 100,
-              // ),
+              /*--------
+              33. Buatlah sebuah Image dengan property berikut:
+                  - image: AssetImage('assets/images/image3.jpg')
+                  - width: 100
+                  - height: 100
+              --------*/
+              const Image(
+                image: AssetImage('assets/images/image3.jpg'),
+                width: 100,
+                height: 100,
+              ),
 
-              // /*--------
-              // 34. Buatlah sebuah Image dengan property berikut:
-              //     - image: AssetImage('assets/images/image4.jpg')
-              //     - width: 250
-              //     - height: 250
-              // --------*/
-              // const Image(
-              //   image: AssetImage('assets/images/image4.jpg'),
-              //   width: 250,
-              //   height: 250,
-              // ),
+              /*--------
+              34. Buatlah sebuah Image dengan property berikut:
+                  - image: AssetImage('assets/images/image4.jpg')
+                  - width: 250
+                  - height: 250
+              --------*/
+              const Image(
+                image: AssetImage('assets/images/image4.jpg'),
+                width: 250,
+                height: 250,
+              ),
 
-              // /*--------
-              // 35. Buatlah sebuah Image dengan property berikut:
-              //     - image: AssetImage('assets/images/image5.jpg')
-              //     - width: 300
-              //     - height: 200
-              // --------*/
-              // const Image(
-              //   image: AssetImage('assets/images/image5.jpg'),
-              //   width: 300,
-              //   height: 200,
-              // ),
+              /*--------
+              35. Buatlah sebuah Image dengan property berikut:
+                  - image: AssetImage('assets/images/image5.jpg')
+                  - width: 300
+                  - height: 200
+              --------*/
+              const Image(
+                image: AssetImage('assets/images/image5.jpg'),
+                width: 300,
+                height: 200,
+              ),
 
-              // /*--------
-              // 36. Buatlah sebuah Image dengan property berikut:
-              //     - image: NetworkImage('https://picsum.photos/200')
-              //     - width: 150
-              //     - height: 150
-              // --------*/
-              // const Image(
-              //   image: NetworkImage('https://picsum.photos/200'),
-              //   width: 150,
-              //   height: 150,
-              // ),
+              /*--------
+              36. Buatlah sebuah Image dengan property berikut:
+                  - image: NetworkImage('https://picsum.photos/200')
+                  - width: 150
+                  - height: 150
+              --------*/
+              const Image(
+                image: NetworkImage('https://picsum.photos/200'),
+                width: 150,
+                height: 150,
+              ),
 
-              // /*--------
-              // 37. Buatlah sebuah Image dengan property berikut:
-              //     - image: NetworkImage('https://picsum.photos/300')
-              //     - width: 200
-              //     - height: 200
-              // --------*/
-              // const Image(
-              //   image: NetworkImage('https://picsum.photos/300'),
-              //   width: 200,
-              //   height: 200,
-              // ),
+              /*--------
+              37. Buatlah sebuah Image dengan property berikut:
+                  - image: NetworkImage('https://picsum.photos/300')
+                  - width: 200
+                  - height: 200
+              --------*/
+              const Image(
+                image: NetworkImage('https://picsum.photos/300'),
+                width: 200,
+                height: 200,
+              ),
 
-              // /*--------
-              // 38. Buatlah sebuah Image dengan property berikut:
-              //     - image: NetworkImage('https://picsum.photos/250')
-              //     - width: 100
-              //     - height: 100
-              // --------*/
-              // const Image(
-              //   image: NetworkImage('https://picsum.photos/250'),
-              //   width: 100,
-              //   height: 100,
-              // ),
+              /*--------
+              38. Buatlah sebuah Image dengan property berikut:
+                  - image: NetworkImage('https://picsum.photos/250')
+                  - width: 100
+                  - height: 100
+              --------*/
+              const Image(
+                image: NetworkImage('https://picsum.photos/250'),
+                width: 100,
+                height: 100,
+              ),
 
-              // /*--------
-              // 39. Buatlah sebuah Image dengan property berikut:
-              //     - image: NetworkImage('https://picsum.photos/400')
-              //     - width: 250
-              //     - height: 250
-              // --------*/
-              // const Image(
-              //   image: NetworkImage('https://picsum.photos/400'),
-              //   width: 250,
-              //   height: 250,
-              // ),
+              /*--------
+              39. Buatlah sebuah Image dengan property berikut:
+                  - image: NetworkImage('https://picsum.photos/400')
+                  - width: 250
+                  - height: 250
+              --------*/
+              const Image(
+                image: NetworkImage('https://picsum.photos/400'),
+                width: 250,
+                height: 250,
+              ),
 
-              // /*--------
-              // 40. Buatlah sebuah Image dengan property berikut:
-              //     - image: NetworkImage('https://picsum.photos/350')
-              //     - width: 300
-              //     - height: 200
-              // --------*/
-              // const Image(
-              //   image: NetworkImage('https://picsum.photos/350'),
-              //   width: 300,
-              //   height: 200,
-              // ),
+              /*--------
+              40. Buatlah sebuah Image dengan property berikut:
+                  - image: NetworkImage('https://picsum.photos/350')
+                  - width: 300
+                  - height: 200
+              --------*/
+              const Image(
+                image: NetworkImage('https://picsum.photos/350'),
+                width: 300,
+                height: 200,
+              ),
 
               /*--------
               41. Buatlah sebuah CircleAvatar dengan property berikut:
@@ -591,73 +587,73 @@ class Efw100CommonWidgetView extends StatefulWidget {
                 backgroundColor: Colors.blue,
               ),
 
-              // /*--------
-              // 42. Buatlah sebuah CircleAvatar dengan property berikut:
-              //     - radius: 80
-              //     - backgroundColor: Colors.green
-              //     Di dalam CircleAvatar tersebut, tambahkan sebuah Image dengan property:
-              //     - image: AssetImage('assets/images/image2.jpg')
-              //     - fit: BoxFit.cover
-              // --------*/
-              // const CircleAvatar(
-              //   radius: 80,
-              //   backgroundColor: Colors.green,
-              //   child: Image(
-              //     image: AssetImage('assets/images/image2.jpg'),
-              //     fit: BoxFit.cover,
-              //   ),
-              // ),
+              /*--------
+              42. Buatlah sebuah CircleAvatar dengan property berikut:
+                  - radius: 80
+                  - backgroundColor: Colors.green
+                  Di dalam CircleAvatar tersebut, tambahkan sebuah Image dengan property:
+                  - image: AssetImage('assets/images/image2.jpg')
+                  - fit: BoxFit.cover
+              --------*/
+              const CircleAvatar(
+                radius: 80,
+                backgroundColor: Colors.green,
+                child: Image(
+                  image: AssetImage('assets/images/image2.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
 
-              // /*--------
-              // 43. Buatlah sebuah CircleAvatar dengan property berikut:
-              //     - radius: 30
-              //     - backgroundColor: Colors.yellow
-              //     Di dalam CircleAvatar tersebut, tambahkan sebuah Image dengan property:
-              //     - image: AssetImage('assets/images/image3.jpg')
-              //     - fit: BoxFit.cover
-              // --------*/
-              // const CircleAvatar(
-              //   radius: 30,
-              //   backgroundColor: Colors.yellow,
-              //   child: Image(
-              //     image: AssetImage('assets/images/image3.jpg'),
-              //     fit: BoxFit.cover,
-              //   ),
-              // ),
+              /*--------
+              43. Buatlah sebuah CircleAvatar dengan property berikut:
+                  - radius: 30
+                  - backgroundColor: Colors.yellow
+                  Di dalam CircleAvatar tersebut, tambahkan sebuah Image dengan property:
+                  - image: AssetImage('assets/images/image3.jpg')
+                  - fit: BoxFit.cover
+              --------*/
+              const CircleAvatar(
+                radius: 30,
+                backgroundColor: Colors.yellow,
+                child: Image(
+                  image: AssetImage('assets/images/image3.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
 
-              // /*--------
-              // 44. Buatlah sebuah CircleAvatar dengan property berikut:
-              //     - radius: 60
-              //     - backgroundColor: Colors.red
-              //     Di dalam CircleAvatar tersebut, tambahkan sebuah Image dengan property:
-              //     - image: AssetImage('assets/images/image4.jpg')
-              //     - fit: BoxFit.cover
-              // --------*/
-              // const CircleAvatar(
-              //   radius: 60,
-              //   backgroundColor: Colors.red,
-              //   child: Image(
-              //     image: AssetImage('assets/images/image4.jpg'),
-              //     fit: BoxFit.cover,
-              //   ),
-              // ),
+              /*--------
+              44. Buatlah sebuah CircleAvatar dengan property berikut:
+                  - radius: 60
+                  - backgroundColor: Colors.red
+                  Di dalam CircleAvatar tersebut, tambahkan sebuah Image dengan property:
+                  - image: AssetImage('assets/images/image4.jpg')
+                  - fit: BoxFit.cover
+              --------*/
+              const CircleAvatar(
+                radius: 60,
+                backgroundColor: Colors.red,
+                child: Image(
+                  image: AssetImage('assets/images/image4.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
 
-              // /*--------
-              // 45. Buatlah sebuah CircleAvatar dengan property berikut:
-              //     - radius: 100
-              //     - backgroundColor: Colors.purple
-              //     Di dalam CircleAvatar tersebut, tambahkan sebuah Image dengan property:
-              //     - image: AssetImage('assets/images/image5.jpg')
-              //     - fit: BoxFit.cover
-              // --------*/
-              // const CircleAvatar(
-              //   radius: 100,
-              //   backgroundColor: Colors.purple,
-              //   child: Image(
-              //     image: AssetImage('assets/images/image5.jpg'),
-              //     fit: BoxFit.cover,
-              //   ),
-              // ),
+              /*--------
+              45. Buatlah sebuah CircleAvatar dengan property berikut:
+                  - radius: 100
+                  - backgroundColor: Colors.purple
+                  Di dalam CircleAvatar tersebut, tambahkan sebuah Image dengan property:
+                  - image: AssetImage('assets/images/image5.jpg')
+                  - fit: BoxFit.cover
+              --------*/
+              const CircleAvatar(
+                radius: 100,
+                backgroundColor: Colors.purple,
+                child: Image(
+                  image: AssetImage('assets/images/image5.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
 
               /*--------
               46. Buatlah sebuah CircleAvatar dengan property berikut:
@@ -1120,17 +1116,20 @@ class Efw100CommonWidgetView extends StatefulWidget {
                 - subtitle: sebuah Text dengan teks "Frontend Developer"
                 - trailing: sebuah Icon dengan ikon "favorite_border"
               --------*/
-              const Card(
+
+              Card(
                 elevation: 12,
-                margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: ListTile(
-                  // leading: Image.asset(
-                  //   'images/profile.png',
-                  //   width: 48,
-                  // ),
-                  title: Text('Jane Doe'),
-                  subtitle: Text('Frontend Developer'),
-                  trailing: Icon(Icons.favorite_border),
+                  leading: Image.asset(
+                    "assets/images/image5.jpg",
+                    width: 48.0,
+                    height: 48.0,
+                    fit: BoxFit.fill,
+                  ),
+                  title: const Text('Jane Doe'),
+                  subtitle: const Text('Frontend Developer'),
+                  trailing: const Icon(Icons.favorite_border),
                 ),
               ),
             ],
